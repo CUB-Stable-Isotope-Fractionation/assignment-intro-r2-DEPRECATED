@@ -26,10 +26,10 @@ do
   # files processed
   filescount=$((filescount+1))
   
-  # linting
+  # linting (without comment bot to avoid issues with private repos)
   passed=true
   printf "INFO: linting file '$file'... "
-  lint=`Rscript -e "lintr::lint(\"$file\")"`
+  lint=`Rscript -e "Sys.setenv(LINTR_COMMENT_BOT=\"FALSE\"); lintr::lint(\"$file\")"`
   length=${#lint}
   if [[ $length -eq 0 && "$passed" = true ]]; then 
     printf "passed all"
