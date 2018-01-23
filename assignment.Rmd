@@ -43,7 +43,7 @@ swirl()
 
 ## 3. Intro to dplyr
 
-At this point, we'll get started on learning some of the new powerful [tidyverse](http://tidyverse.org/) R packages with the first lecture of the **Getting and Cleaning Data** course. Exit swirl (`Esc`) and run the following chunk to install the second course and restart swirl. In the course menu, select **Getting and Cleaning Data** and complete the first lecture **1: Manipulating Data with dplyr**.
+At this point, we'll get started on learning some of the new powerful [tidyverse](http://tidyverse.org/) R packages with the first lecture of the **Getting and Cleaning Data** course. Exit swirl (`Esc`, then run `bye()`) and run the following chunk to install the second course and restart swirl. In the course menu, select **Getting and Cleaning Data** and complete the first lecture **1: Manipulating Data with dplyr**.
 
 ```{r, eval=FALSE}
 install_course("Getting and Cleaning Data")
@@ -57,7 +57,9 @@ swirl()
 
 ## 4. Checking your R code (linting and rendering)
 
-To check the quality of your coding style (a process called *linting*) and catch any non-standard practices, it is useful to regularly run the `Lint current file` command from the `Addins` menu (shortcut `Alt/Option`+`Shift`+`L`). Also, `Knitting` your file regularly can help catch programming errors. Before submitting an assignment for grading, you should always make sure it passes the linting without warnings and can be knitted to produce an HTML file (`Knit to HTML` or `Cmd`+`Shift`+`K`). The default coding style that is tested during linting is that defined by Hadley Wickham (http://r-pkgs.had.co.nz/style.html). It's useful as a reference but you don't need to study this in much detail, the linter will just tell you what to correct,
+To check the quality of your coding style (a process called *linting*) and catch any non-standard practices, it is useful to regularly run the `Lint current file` command from the `Addins` menu (shortcut `Alt/Option`+`Shift`+`L`). Also, `Knitting` your file regularly can help catch programming errors. Before submitting an assignment for grading, you should always make sure it passes the linting without warnings and can be rendered/knitted to produce an HTML file (`Knit to HTML` or `Cmd`+`Shift`+`K`). The default coding style that is tested during linting is that defined by Hadley Wickham (http://r-pkgs.had.co.nz/style.html). It's useful as a reference but you don't need to study this in much detail, the linter will just tell you what to correct.
+
+Make sure you have excited swirl (`Esc`), otherwise the linting and rendering/knitting commands will not be able to execute.
 
 #### 4.1 Run a linting check and correct the coding style
 
