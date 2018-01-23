@@ -1,4 +1,4 @@
-# Template
+# R Intro (part 2)
 
 [![status](
   https://travis-ci.com/ORGANIZATION/REPOSITORY.svg?token=G1bSzEvMAupn3uUudqbz&branch=master
@@ -28,10 +28,6 @@
 
 To complete this assignment:
 
- 1.
- 2.
- 3.  
-
-## Submission
-
-Once you have completed the assignment, make sure that the code checking is complete and successful (i.e. the vignette says `build passing`), then submit by creating a pull request with `submit` as the **base branch** and your instructor as the reviewer. 
+ 1. Complete the exercises in [`assignment.Rmd`](assignment.Rmd)
+ 2. Make sure that the code checking is complete and successful (i.e. the vignette at the top of this file says `build passing`)
+ 3. Submit by creating a pull request with `submit` as the **base branch** and your instructor as the reviewer
