@@ -1,0 +1,12 @@
+---
+title: "Assignment Example"
+output: html_document
+---
+
+This RMD file should create no linting or rendering errors.
+
+```{r cars}
+test <- cars
+print(test)
+```
+

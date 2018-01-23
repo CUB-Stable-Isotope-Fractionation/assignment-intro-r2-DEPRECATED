@@ -1,0 +1,13 @@
+language: r
+warnings_are_errors: false
+sudo: false
+script: ./check_rmds.sh
+cache: packages
+r:
+  - 3.4.2
+r_packages:
+  - rmarkdown
+  - lintr
+  - tidyverse
+os:
+  - linux
