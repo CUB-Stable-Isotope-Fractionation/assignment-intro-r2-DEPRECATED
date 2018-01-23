@@ -1,12 +1,77 @@
 ---
-title: "Assignment Example"
-output: html_document
+title: "R Intro (part 2)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
 ---
 
-This RMD file should create no linting or rendering errors.
+## 1. Factors, Data Frames and Real World Data
 
-```{r cars}
-test <- cars
-print(test)
+Return to [http://tryr.codeschool.com/](http://tryr.codeschool.com/) and complete lessons 5-7. For each of the lessons, answer the following questions:
+
+#### 1.1 What does the last command in chapter 5 add to the plot?
+
+
+#### 1.2 What does the last command in chapter 6 do?
+
+
+#### 1.3 What does the last command in chapter 7 do?
+
+
+## 2. Logic and Functions
+
+For the next set of exercises, we will use the interactive R learning tool [**Swirl**](http://swirlstats.com/) which is very similar to the above [http://tryr.codeschool.com/](http://tryr.codeschool.com/) but runs directly from your own R session. The Swirl package is already installed on the RStudio server but you need to install the different R courses to run them.
+
+Run the following code chunk to install the **R Programming** swirl course:
+
+```{r, eval=FALSE}
+library(swirl)
+install_course("R Programming")
 ```
+
+Now start swirl by running the following code chunk and follow the step-by-step instructions (the name that you enter does not matter but if you use the same one you can resume an exercise where you left off). In the course menu, select the **R Programming** course and complete lectures **8: Logic** and **9: Functions** (you can check out others if you like, they cover some of the content you learned at the [http://tryr.codeschool.com/](http://tryr.codeschool.com/)). Note that for some swirl lectures, it asks you add the end whether you want to receive credit on Coursera.org. Just answer with No since this class is not using Coursera. To leave Swirl, hit `Esc` at any time.
+
+```{r, eval=FALSE}
+swirl()
+```
+
+#### 2.1 What is the correct answer to the last question in lecture 8: Logic?
+
+
+#### 2.2 What is the correct answer to the last question in lecture 9: Functions?
+
+## 3. Intro to dplyr
+
+At this point, we'll get started on learning some of the new powerful [tidyverse](http://tidyverse.org/) R packages with the first lecture of the **Getting and Cleaning Data** course. Exit swirl (`Esc`) and run the following chunk to install the second course and restart swirl. In the course menu, select **Getting and Cleaning Data** and complete the first lecture **1: Manipulating Data with dplyr**.
+
+```{r, eval=FALSE}
+install_course("Getting and Cleaning Data")
+swirl()
+```
+
+#### 3.1 What does the last command in lecture 1 do and what is the answer it yields?
+
+#### 3.2 On your cheatsheet for dplyr, go through and highlight the functions you just learned about.
+
+
+## 4. Checking your R code (linting and rendering)
+
+To check the quality of your coding style (a process called *linting*) and catch any non-standard practices, it is useful to regularly run the `Lint current file` command from the `Addins` menu (shortcut `Alt/Option`+`Shift`+`L`). Also, `Knitting` your file regularly can help catch programming errors. Before submitting an assignment for grading, you should always make sure it passes the linting without warnings and can be knitted to produce an HTML file (`Knit to HTML` or `Cmd`+`Shift`+`K`). The default coding style that is tested during linting is that defined by Hadley Wickham (http://r-pkgs.had.co.nz/style.html). It's useful as a reference but you don't need to study this in much detail, the linter will just tell you what to correct,
+
+#### 4.1 Run a linting check and correct the coding style
+
+```{r "linting", eval=FALSE, echo=FALSE}
+my_data = cars
+my_string <- 'test'
+my_comment <- 5 # this comment describes the details about what is happening in my_comment <- 5
+```
+
+#### 4.2 Fix the code so it can be knitted
+
+```{r}
+print(my_dato)
+```
+
+
 
