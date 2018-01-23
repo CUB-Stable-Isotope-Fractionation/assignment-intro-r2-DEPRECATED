@@ -61,7 +61,7 @@ To check the quality of your coding style (a process called *linting*) and catch
 
 #### 4.1 Run a linting check and correct the coding style
 
-```{r "linting", eval=FALSE, echo=FALSE}
+```{r "linting"}
 my_data = cars
 my_string <- 'test'
 my_comment <- 5 # this comment describes the details about what is happening in my_comment <- 5
@@ -69,7 +69,7 @@ my_comment <- 5 # this comment describes the details about what is happening in 
 
 #### 4.2 Fix the code so it can be knitted
 
-```{r}
+```{r "error-fixing"}
 print(my_dato)
 ```
 
