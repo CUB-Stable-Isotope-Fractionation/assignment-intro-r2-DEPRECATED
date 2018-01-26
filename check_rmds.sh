@@ -1,8 +1,15 @@
 #!/bin/bash
+# Author: Sebastian Kopf
+# Last update: Jan 25 2018
+
+printf "────────────────────────────────────────────────────────────────────\n"
+echo "INFO: starting the linting and rendering check for all .Rmd files"
+printf "────────────────────────────────────────────────────────────────────\n"
 
 # exit function
 function on_exit {
   echo "DONE: processed $filescount .Rmd files ($lintcount passed linting, $rendercount passed rendering)"
+  printf "────────────────────────────────────────────────────────────────────\n"
   if [[ lintcount -eq filescount && rendercount -eq filescount ]]; then
     exit 0 # all good
   else
@@ -25,6 +32,7 @@ do
 
   # files processed
   filescount=$((filescount+1))
+  printf "INFO: processing file #$filescount - '$file'\n"
   
   # linting (without comment bot to avoid issues with private repos)
   passed=true
@@ -35,17 +43,18 @@ do
     printf "passed all"
     lintcount=$((lintcount+1))
   else
-    printf "encountered warnings:\n$lint"
+    printf "encountered warnings:\n"
+    echo "$lint" # echo to avoid problems with special chars in printf
   fi
   printf "\n"
   
   # rendering
   passed=true
   printf "INFO: rendering file '$file'... "
-  render=`Rscript -e "rmarkdown::render(\"$file\", quiet=TRUE)"`
+  render=`Rscript -e "rmarkdown::render(\"$file\", quiet=FALSE)"`
   if [ "$passed" = true ]; then 
-    printf "successfully\n"
+    printf "INFO: '$file' rendered successfully.\n"
     rendercount=$((rendercount+1))
   fi
-
+  printf "────────────────────────────────────────────────────────────────────\n"
 done
