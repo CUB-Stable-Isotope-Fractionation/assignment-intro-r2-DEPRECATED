@@ -2,8 +2,14 @@
 title: "R Intro (part 2)"
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  html_document: 
     df_print: paged
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+    code_folding: show
+editor_options:
+  chunk_output_type: console
 ---
 
 ## 1. Factors, Data Frames and Real World Data
@@ -72,7 +78,7 @@ my_comment <- 5 # this comment describes the details about what is happening in 
 #### 4.2 Fix the code so it can be knitted
 
 ```{r "error-fixing"}
-print(my_dato)
+my_dato
 ```
 
 
